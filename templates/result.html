@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>处理结果展示</title>
+    <script type="text/javascript" src="{% static 'jquery/jquery-3.4.1.min.js' %}"></script>
+    <link type="text/css" rel="stylesheet" href="{% static 'bootstrap3/css/bootstrap.min.css' %}" />
+    <script type="text/javascript" src="{% static 'bootstrap3/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="javascript:void(0)">过程挖掘软件</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="{% url 'index' %}"><span class="glyphicon glyphicon-home">&nbsp </span>首页</a></li>
+						<li><a href=""><span class="glyphicon glyphicon-eye-open">&nbsp </span><strong>关于我们</strong></a></li>
+						<!-- <li><a href="#">页面 3</a></li> -->
+					</ul>
+				</div>
+			</div>
+		</nav>
+        <h1 class="text-center">{{ algorithm }}挖掘结果展示</h1>
+        <img src="{{ base64img }}" width='900px' class = "center-block">
+        <hr/>
+        <div style="text-align:center"><a href="{{ base64img }}" download="{{ algorithm }}.png" class="btn btn-primary">下载结果</a></div>
+        <hr/>
+    <footer class="footer">
+			<div class="container">
+				<div class="row footer-top">
+					<div class="col-md-6 col-lg-6">
+						<h4>
+							<img src="{% static 'img/YNULogo.png' %}" alt="">
+							<strong>软件学院-软件过程-过程挖掘软件</strong>
+						</h4>
+						<p>龚尹鸿杰制作开发</p>
+					</div>
+					<div class="col-md-6  col-lg-6">
+						<div class="row about">
+							<div class="col-sm-3">
+								<h4>关于</h4>
+								<ul class="list-unstyled">
+									<li><a href="#">关于我们</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<h4>联系方式</h4>
+								<ul class="list-unstyled">
+									<li><a href="#">电子邮件</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<h4>指导老师</h4>
+								<ul class="list-unstyled">
+									<li><a href="#">莫启</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="row footer-bottom">
+					<ul class="list-inline text-center">
+						<li><a href="#">版权信息：© 云南大学 软件学院 龚尹鸿杰</a></li>
+{#						<li>京公网安备xxxxxxxxxxxxxx</li>#}
+					</ul>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

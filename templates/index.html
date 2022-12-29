@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>过程挖掘软件首页</title>
+		<script type="text/javascript" src="{% static 'jquery/jquery-3.4.1.min.js' %}"></script>
+		<link type="text/css" rel="stylesheet" href="{% static 'bootstrap3/css/bootstrap.min.css' %}" />
+		<script type="text/javascript" src="{% static 'bootstrap3/js/bootstrap.min.js' %}"></script>
+		<style>
+			#header{
+				background-color: #96b97d;
+			}
+			.fakeimg {
+				height: 300px;
+				background: #96b97d;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div class="jumbotron text-center" style="margin-bottom:0" id="header">
+			<h1>欢迎使用过程挖掘软件</h1>
+			<p>让过程挖掘更简单！</p>
+		</div>
+
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="javascript:void(0)">过程挖掘软件</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#"><span class="glyphicon glyphicon-home">&nbsp </span>首页</a></li>
+						<li><a href=""><span class="glyphicon glyphicon-eye-open">&nbsp </span><strong>关于我们</strong></a></li>
+						<!-- <li><a href="#">页面 3</a></li> -->
+					</ul>
+				</div>
+			</div>
+		</nav>
+        <div>
+            <h4 class="text-center">alpha算法</h4>
+            <form class="form-inline col-md-offset-4 col-lg-offset-4col-xl-offset-4" action="{% url 'alpha'%}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="file" multiple="" name="logfile" class="btn btn-primary"  class="form-control">
+                    </div>
+                </div>
+                <input type="submit" value="alpha算法挖掘" class="btn btn-primary">
+            </form>
+        </div>
+        <hr/>
+         <div>
+            <h4 class="text-center">heuristics算法</h4>
+            <form class="form-inline col-md-offset-4 col-lg-offset-4col-xl-offset-4" action="{% url 'heuristics'%}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="file" multiple="" name="logfile" class="btn btn-success"  class="form-control">
+                    </div>
+                </div>
+                <input type="submit" value="heuristics算法挖掘" class="btn btn-success">
+            </form>
+        </div>
+        <hr/>
+         <div>
+            <h4 class="text-center">inductive算法</h4>
+            <form class="form-inline col-md-offset-4 col-lg-offset-4col-xl-offset-4" action="{% url 'inductive'%}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="file" multiple="" name="logfile" class="btn btn-info"  class="form-control">
+                    </div>
+                </div>
+                <input type="submit" value="inductive算法挖掘" class="btn btn-info">
+            </form>
+        </div>
+        <hr/>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row footer-top">
+					<div class="col-md-6 col-lg-6">
+						<h4>
+							<img src="{% static 'img/YNULogo.png' %}" alt="">
+							<strong>软件学院-软件过程-过程挖掘软件</strong>
+						</h4>
+						<p>龚尹鸿杰制作开发</p>
+					</div>
+					<div class="col-md-6  col-lg-6">
+						<div class="row about">
+							<div class="col-sm-3">
+								<h4>关于</h4>
+								<ul class="list-unstyled">
+									<li><a href="#">关于我们</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<h4>联系方式</h4>
+								<ul class="list-unstyled">
+									<li><a href="#">电子邮件</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-3">
+								<h4>指导老师</h4>
+								<ul class="list-unstyled">
+									<li><a href="#">莫启</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="row footer-bottom">
+					<ul class="list-inline text-center">
+						<li><a href="#">版权信息：© 云南大学 软件学院 龚尹鸿杰</a></li>
+{#						<li>京公网安备xxxxxxxxxxxxxx</li>#}
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

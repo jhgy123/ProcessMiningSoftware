@@ -1,0 +1,11 @@
+Case ID;Event ID;dd-MM-yyyy:HH.mm;Activity;Resource;Costs
+1;35654423;30-12-2010:11.02;register request;Pete;50
+1;35654424;31-12-2010:10.06;examine thoroughly;Sue;400
+1;35654425;05-01-2011:15.12;check ticket;Mike;100
+1;35654426;06-01-2011:11.18;decide;Sara;200
+1;35654427;07-01-2011:14.24;reject request;Pete;200
+4;35654641;06-01-2011:15.02;register request;Pete;50
+4;35654643;07-01-2011:12.06;check ticket;Mike;100
+4;35654644;08-01-2011:14.43;examine thoroughly;Sean;400
+4;35654645;09-01-2011:12.02;decide;Sara;200
+4;35654647;12-01-2011:15.44;reject request;Ellen;200
